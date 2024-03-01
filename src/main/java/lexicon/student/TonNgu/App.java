@@ -22,21 +22,23 @@ public class App {
                 case 1:
                     System.out.println("Input total amount of numbers you want to add:");
                     int additionOperands = scanner.nextInt();
-                    System.out.println("Start putting in numbers mf");
+                    System.out.println("Input the first number");
                     double addresult = 0;
                     for (int i = 0; i < additionOperands; i++) {
+                        System.out.println("Input next number:");
                         addresult = addresult + scanner.nextDouble();
-                        System.out.println(addresult);
+                        System.out.println("Result: " + addresult);
                     }
                     break;
                 case 2:
                     System.out.println("Input total amount of operands for subtraction:");
                     int subOperands = scanner.nextInt();
-                    System.out.println("Start putting in numbers mf");
+                    System.out.println("Input the first number:");
                     double subresult = scanner.nextDouble();
                     for (int i = 0; i < subOperands; i++) {
+                        System.out.println("Input next number:");
                         subresult = subresult - scanner.nextDouble();
-                        System.out.println(subresult);
+                        System.out.println("Result: " + subresult);
                     }
                     break;
                 case 3:
