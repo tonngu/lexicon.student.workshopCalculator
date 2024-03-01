@@ -18,22 +18,40 @@ public class App {
             if (operationChoice == 5) {
                 break;
             }
-            System.out.println("Input the first number:");
-            double n1 = scanner.nextDouble();
-            System.out.println("Input the second number:");
-            double n2 = scanner.nextDouble();
             switch (operationChoice) {
                 case 1:
-                    System.out.println("The result is: " + (n1 + n2));
+                    System.out.println("Input total amount of numbers you want to add:");
+                    int additionOperands = scanner.nextInt();
+                    System.out.println("Start putting in numbers mf");
+                    double addresult = 0;
+                    for (int i = 0; i < additionOperands; i++) {
+                        addresult = addresult + scanner.nextDouble();
+                        System.out.println(addresult);
+                    }
                     break;
                 case 2:
-                    System.out.println("The result is: " + (n1 - n2));
+                    System.out.println("Input total amount of operands for subtraction:");
+                    int subOperands = scanner.nextInt();
+                    System.out.println("Start putting in numbers mf");
+                    double subresult = scanner.nextDouble();
+                    for (int i = 0; i < subOperands; i++) {
+                        subresult = subresult - scanner.nextDouble();
+                        System.out.println(subresult);
+                    }
                     break;
                 case 3:
+                    System.out.println("Input the first number:");
+                    double n1 = scanner.nextDouble();
+                    System.out.println("Input the second number:");
+                    double n2 = scanner.nextDouble();
                     System.out.println("The result is: " + (n1 * n2));
                     break;
                 case 4:
-                    System.out.println("The result is: " + (n1 / n2));
+                    System.out.println("Input the first number:");
+                    double n3 = scanner.nextDouble();
+                    System.out.println("Input the second number:");
+                    double n4 = scanner.nextDouble();
+                    System.out.println("The result is: " + (n3 / n4));
                     break;
             }
         }
