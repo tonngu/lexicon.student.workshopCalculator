@@ -6,8 +6,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        boolean goAgain = true;
-        while (goAgain = true) {
+        while (true) {
             System.out.println("Console Calculator App");
             System.out.println("Choose one of the following operation type, enter number:");
             System.out.println("1. Addition");
@@ -36,19 +35,7 @@ public class App {
                 case 4:
                     System.out.println("The result is: " + (n1 / n2));
                     break;
-                case 5:
-                    goAgain = false;
-                    break;
             }
-            /*System.out.println("Perform another operation?");
-            System.out.println("1. Yes");
-            System.out.println("2. No");
-            int contA = scanner.nextInt();
-            if (contA == 2) {
-                goAgain = false;
-
-            }*/
-
         }
         System.out.println("Application Terminated.");
     }
