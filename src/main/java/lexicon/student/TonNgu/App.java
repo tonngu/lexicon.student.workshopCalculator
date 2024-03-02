@@ -1,59 +1,27 @@
 package lexicon.student.TonNgu;
 
-import java.util.Scanner;
+import static lexicon.student.TonNgu.Methods.*;
 
 
 public class App {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.println("Console Calculator App");
-            System.out.println("Choose one of the following operation type, enter number:");
-            System.out.println("1. Addition");
-            System.out.println("2. Subtraction");
-            System.out.println("3. Multiplication");
-            System.out.println("4. Division");
-            System.out.println("5. Terminate Application");
-            int operationChoice = scanner.nextInt();
-            if (operationChoice == 5) {
+            int a = welcome(); //calls up choice menu for console based calculator
+            if (a == 5) {
                 break;
             }
-            switch (operationChoice) {
+            switch (a) {
                 case 1:
-                    System.out.println("Input total amount of numbers you want to add:");
-                    int additionOperands = scanner.nextInt();
-                    System.out.println("Input the first number");
-                    double addresult = 0;
-                    for (int i = 0; i < additionOperands; i++) {
-                        System.out.println("Input next number:");
-                        addresult = addresult + scanner.nextDouble();
-                        System.out.println("Result: " + addresult);
-                    }
+                    addition(); //performs addition and asks users to input amount of operands
                     break;
                 case 2:
-                    System.out.println("Input total amount of operands for subtraction:");
-                    int subOperands = scanner.nextInt();
-                    System.out.println("Input the first number:");
-                    double subresult = scanner.nextDouble();
-                    for (int i = 0; i < subOperands; i++) {
-                        System.out.println("Input next number:");
-                        subresult = subresult - scanner.nextDouble();
-                        System.out.println("Result: " + subresult);
-                    }
+                    subtraction(); //performs subtraction and asks users to input amount of operands
                     break;
                 case 3:
-                    System.out.println("Input the first number:");
-                    double n1 = scanner.nextDouble();
-                    System.out.println("Input the second number:");
-                    double n2 = scanner.nextDouble();
-                    System.out.println("The result is: " + (n1 * n2));
+                    multiplication(); //performs basic multiplication with 2 operands
                     break;
                 case 4:
-                    System.out.println("Input the first number:");
-                    double n3 = scanner.nextDouble();
-                    System.out.println("Input the second number:");
-                    double n4 = scanner.nextDouble();
-                    System.out.println("The result is: " + (n3 / n4));
+                    division(); //performs basic division with 2 operands
                     break;
             }
         }
